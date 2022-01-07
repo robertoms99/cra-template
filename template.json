@@ -1,0 +1,60 @@
+{
+  "package": {
+    "devDependencies": {
+      "@commitlint/cli": "^15.0.0",
+      "@types/styled-components": "^5.1.15",
+      "@commitlint/config-conventional": "^15.0.0",
+      "@typescript-eslint/eslint-plugin": "^4.33.0",
+      "eslint": "^7.11.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-config-standard": "^16.0.3",
+      "eslint-config-standard-with-typescript": "^21.0.1",
+      "eslint-plugin-import": "^2.25.3",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "eslint-plugin-promise": "^5.1.1",
+      "eslint-plugin-react": "^7.27.0",
+      "husky": "^7.0.0",
+      "lint-staged": "^12.0.2",
+      "prettier": "^2.4.1",
+      "http-server": "^14.0.0",
+      "stylelint": "^14.1.0",
+      "stylelint-config-prettier": "^9.0.3",
+      "stylelint-config-standard": "^24.0.0",
+      "@testing-library/jest-dom": "^5.14.1",
+      "@testing-library/react": "^12.0.0",
+      "@testing-library/user-event": "^13.2.1",
+      "@types/jest": "^27.0.1",
+      "@types/node": "^16.7.13",
+      "@types/react": "^17.0.20",
+      "@types/react-dom": "^17.0.9",
+      "typescript": "^4.4.2",
+      "web-vitals": "^2.1.0",
+      "react-scripts": "4.0.3"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-router-dom": "^6.0.2",
+      "styled-components": "^5.3.3"
+    },
+    "scripts": {
+      "dev": "react-scripts start",
+      "start": "npm run build && http-server ./build",
+      "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
+      "test": "react-scripts test",
+      "test:ci": "react-scripts test --watchAll=false",
+      "prepare": "husky install",
+      "eject": "react-scripts eject",
+      "lint:commit": "commitlint --color --format --verbose --edit",
+      "lint:ecma": "eslint --fix --no-error-on-unmatched-pattern --cache --cache-location \".eslintcache/\"",
+      "lint:style": "stylelint --fix --ignore-disables --cache --cache-location \".stylelintcache/\" --report-invalid-scope-disables --report-needless-disables --formatter=verbose",
+      "format": "prettier --write --no-error-on-unmatched-pattern --ignore-unknown",
+      "qualitycode": "lint-staged --verbose"
+    },
+    "browserslist": {
+      "production": [">0.2%", "not dead", "not op_mini all"],
+      "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    }
+  }
+}

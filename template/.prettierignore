@@ -1,0 +1,13 @@
+# node dependencies
+node_modules/
+
+# production directories
+dist/
+build/
+
+#cache
+.eslintcache/
+.stylelintcache/
+
+# misc
+.netlify/

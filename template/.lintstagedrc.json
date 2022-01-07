@@ -1,0 +1,5 @@
+{
+  "*": ["yarn format"],
+  "*.{js,ts,jsx,tsx}": ["yarn lint:ecma"],
+  "*.{css,scss,sass}": ["yarn lint:style"]
+}
